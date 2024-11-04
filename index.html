@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Trading Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="prediction-container">
+    <h1>Color Trading Prediction</h1>
+    
+    <label for="interval">Choose Interval:</label>
+    <select id="interval" onchange="showPeriodInput()">
+        <option value="" disabled selected>Select interval</option>
+        <option value="30">30 Seconds</option>
+        <option value="60">1 Minute</option>
+        <option value="180">3 Minutes</option>
+        <option value="300">5 Minutes</option>
+    </select>
+
+    <div id="period-section" style="display: none;">
+        <label for="period">Enter Period Number:</label>
+        <input type="number" id="period" placeholder="Enter period number" required>
+        
+        <button class="predict-btn" onclick="startPrediction()">Predict</button>
+    </div>
+
+    <div class="loading" id="loading" style="display: none;">Predicting...</div>
+    <div class="prediction-result" id="result">Awaiting Prediction...</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
